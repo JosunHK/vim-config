@@ -29,3 +29,5 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = ""
 
 vim.opt.splitright = true
+
+vim.opt.ic = true
