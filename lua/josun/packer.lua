@@ -10,9 +10,25 @@ return require('packer').startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.8',
         -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { {
+            'nvim-lua/plenary.nvim',
+            "nvim-telescope/telescope-live-grep-args.nvim"
+        } },
+
+        config = function()
+            local telescope = require("telescope")
+
+            -- first setup telescope
+            telescope.setup({
+                -- your config
+            })
+
+            -- then load the extension
+            telescope.load_extension("live_grep_args")
+        end
 
     }
+
 
     use({
         "neanias/everforest-nvim",
@@ -39,10 +55,10 @@ return require('packer').startup(function(use)
             -- {'williamboman/mason.nvim'},
             -- {'williamboman/mason-lspconfig.nvim'},
 
-            {'neovim/nvim-lspconfig'},
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'L3MON4D3/LuaSnip'},
+            { 'neovim/nvim-lspconfig' },
+            { 'hrsh7th/nvim-cmp' },
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'L3MON4D3/LuaSnip' },
         }
     }
 
@@ -52,15 +68,26 @@ return require('packer').startup(function(use)
         "neovim/nvim-lspconfig",
     }
 
-    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use('ThePrimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('nvim-tree/nvim-tree.lua')
+    use('nvim-tree/nvim-web-devicons')
     use('github/copilot.vim')
-    --use('prettier/vim-prettier')
-    use{
+    use('jose-elias-alvarez/null-ls.nvim')
+    use('MunifTanjim/prettier.nvim')
+    use('xiyaowong/transparent.nvim')
+    use('luckasRanarison/tailwind-tools.nvim')
+    use('ThePrimeagen/vim-apm')
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+    use {
         'christoomey/vim-tmux-navigator',
         lazy = false,
     }
