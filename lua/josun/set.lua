@@ -31,3 +31,7 @@ vim.opt.colorcolumn = ""
 vim.opt.splitright = true
 
 vim.opt.ic = true
+
+vim.opt.clipboard="unnamed"
+
+
