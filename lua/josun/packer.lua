@@ -81,6 +81,7 @@ return require('packer').startup(function(use)
     use('xiyaowong/transparent.nvim')
     use('luckasRanarison/tailwind-tools.nvim')
     use('ThePrimeagen/vim-apm')
+    use('norcalli/nvim-colorizer.lua')
     use {
         'numToStr/Comment.nvim',
         config = function()
