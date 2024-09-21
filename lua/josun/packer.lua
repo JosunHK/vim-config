@@ -82,12 +82,16 @@ return require('packer').startup(function(use)
     use('luckasRanarison/tailwind-tools.nvim')
     use('ThePrimeagen/vim-apm')
     use('norcalli/nvim-colorizer.lua')
+    use('mrcjkb/haskell-tools.nvim')
     use {
         'numToStr/Comment.nvim',
         config = function()
             require('Comment').setup()
         end
     }
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+      require("toggleterm").setup()
+    end}
     use {
         'christoomey/vim-tmux-navigator',
         lazy = false,

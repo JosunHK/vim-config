@@ -12,14 +12,14 @@ cmp.setup({
         ['<C-e>'] = cmp.mapping.abort(),
         ['<Up>'] = cmp.mapping.select_prev_item({ behavior = 'select' }),
         ['<Down>'] = cmp.mapping.select_next_item({ behavior = 'select' }),
-        ['<C-j>'] = cmp.mapping(function()
+        ['<C-k>'] = cmp.mapping(function()
             if cmp.visible() then
                 cmp.select_prev_item({ behavior = 'insert' })
             else
                 cmp.complete()
             end
         end),
-        ['<C-k>'] = cmp.mapping(function()
+        ['<C-j>'] = cmp.mapping(function()
             if cmp.visible() then
                 cmp.select_next_item({ behavior = 'insert' })
             else
