@@ -44,7 +44,7 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- easy log reload
 vim.keymap.set("n", "<leader>fr", "<cmd>1,$d <bar> w!<cr>")
-vim.keymap.set("n", "<leader>r", "<cmd>e!<cr>")
+vim.keymap.set("n", "<leader>lr", "<cmd>e!<cr>")
 
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])

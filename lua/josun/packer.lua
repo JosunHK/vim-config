@@ -83,6 +83,8 @@ return require('packer').startup(function(use)
     use('ThePrimeagen/vim-apm')
     use('norcalli/nvim-colorizer.lua')
     use('mrcjkb/haskell-tools.nvim')
+    use {'Vigemus/iron.nvim'}
+    use("nathom/filetype.nvim")
     use {
         'numToStr/Comment.nvim',
         config = function()
