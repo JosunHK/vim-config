@@ -1,4 +1,5 @@
 require('lsp-zero').extend_cmp()
+
 local lsp_zero = require('lsp-zero')
 
 local cmp = require('cmp')
@@ -39,8 +40,6 @@ lsp_zero.on_attach(function(client, bufnr)
     lsp_zero.default_keymaps({ buffer = bufnr })
 end)
 
--- to learn how to use mason.nvim
--- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = {},
@@ -56,7 +55,7 @@ require('mason-lspconfig').setup({
                             version = "LuaJIT"
                         },
                         diagnostics = {
-                            globals = { "vim" }
+                            globals = { "vim", "love" }
                         },
                         workspace = {
                             checkThirdParty = false,

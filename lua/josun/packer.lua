@@ -75,7 +75,6 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive')
     use('nvim-tree/nvim-tree.lua')
     use('nvim-tree/nvim-web-devicons')
-    use('github/copilot.vim')
     use('jose-elias-alvarez/null-ls.nvim')
     use('MunifTanjim/prettier.nvim')
     use('xiyaowong/transparent.nvim')
@@ -84,7 +83,7 @@ return require('packer').startup(function(use)
     use('norcalli/nvim-colorizer.lua')
     use('mrcjkb/haskell-tools.nvim')
     use {'Vigemus/iron.nvim'}
-    use("nathom/filetype.nvim")
+    use {'S1M0N38/love2d.nvim'}
     use {
         'numToStr/Comment.nvim',
         config = function()
